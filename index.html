@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <script>
+        const nomDuJoueur = prompt('Quel est ton nom?');
+        const rightPrice = Math.ceil(Math.random() * 100);
+        let playerNumber = parseInt(prompt(`OK ${nomDuJoueur}, maintenant choisis un nombre entre 1 et 100`));
+
+        while (playerNumber !== rightPrice) {
+            if (playerNumber > rightPrice) {
+                playerNumber = parseInt(prompt("C'est moins !"));
+            } else if (playerNumber < rightPrice) {
+                playerNumber = parseInt(prompt("C'est plus !"));
+            }
+        }
+        console.log(`Bravo ${nomDuJoueur}, c'est gagné !🥳 Le nombre était effectivement ${rightPrice}`);
+
+
+
+
+
+
+
+
+
+
+        // const firstValue = parseInt(prompt("Veuillez indiquer une première valeur :"));
+        // const operator = prompt("Veuillez indiquer un opérateur :");
+        // const secondValue = parseInt(prompt("Veuillez indiquer une deuxième valeur :"));
+
+        // switch(operator) {
+        //     case "+":
+        //         console.log(firstValue + secondValue);
+        //         break;
+        //     case "-":
+        //         console.log(firstValue - secondValue);
+        //         break;
+        //     case "*":
+        //         console.log(firstValue * secondValue);
+        //         break;
+        //     case "/":
+        //         console.log(firstValue / secondValue);
+        //         break;
+        //     default:
+        //         console.error("Opérateur invalide")
+        //         break;
+        // }
+    </script>
+</body>
+</html>
