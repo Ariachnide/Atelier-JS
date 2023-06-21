@@ -1,12 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator 2</title>
+    <title>Calculatrice</title>
 </head>
 <body>
-    <!-- <script src="script.js"></script> -->
-    <script src="rightprice.js"></script>
+    <script>
+        const playerName = prompt("Veuillez indiquer votre nom :");
+        const rightPrice = Math.ceil(Math.random() * 100);
+
+        let choice = parseInt(prompt("Choisissez un nombre entre 1 & 100 svp"));
+        
+        while(choice !== rightPrice) {
+            if (choice > rightPrice) {
+                choice = parseInt(prompt("C'est moins !"));
+            } else if (choice < rightPrice) {
+                choice = parseInt(prompt("C'est plus !"));
+            }
+        }
+        console.log(playerName + " a gagné !");
+    </script>
+    <!-- <script>
+        let firstValue = prompt("Veuillez indiquer la première valeur:");
+        firstValue = parseInt(firstValue);
+
+        const operator = prompt("Choisissez l'opérateur:");
+
+        const secondValue = parseInt(prompt("Veuillez indiquer la deuxième valeur:"));
+
+        switch(operator) {
+            case "+":
+                console.log(firstValue + secondValue);
+                break;
+            case "-":
+                console.log(firstValue - secondValue);
+                break;
+            case "*":
+                console.log(firstValue * secondValue);
+                break;
+            case "/":
+                console.log(firstValue / secondValue);
+                break;
+            default:
+                console.error("Opérateur invalide");
+        }
+
+        // if(operator === "+") {
+        //     console.log(firstValue + secondValue);
+        // } else if(operator === "-") {
+        //     console.log(firstValue - secondValue);
+        // } else if(operator === "*") {
+        //     console.log(firstValue * secondValue);
+        // } else if(operator === "/") {
+        //     console.log(firstValue / secondValue);
+        // } else {
+        //     console.error("Opérateur invalide");
+        // }
+    </script> -->
 </body>
 </html>
